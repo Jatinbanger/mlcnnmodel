@@ -123,6 +123,9 @@ accuracy = history.history['accuracy'][-1]
 
 print("accuracy " + str(accuracy))
 
+f = open("accuracy.txt", "w")
+f.write(str(accuracy))
+f.close()
 
 
 # In[ ]:
