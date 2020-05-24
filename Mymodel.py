@@ -5,7 +5,7 @@
 
 
 from keras.layers import Convolution2D, MaxPooling2D, Flatten, Dense
-
+import sys
 
 # In[2]:
 
@@ -107,12 +107,13 @@ test_set = test_datagen.flow_from_directory(
 
 
 # In[ ]:
-
+epochs_step=int(sys.argv[1])
+epochs=int(sys.argv[2])
 
 history = model.fit(
         training_set,
-        steps_per_epoch=10,
-        epochs=10,
+        steps_per_epoch=epochs_step,
+        epochs=epochs,
         validation_data=test_set,
         validation_steps=10)
 
