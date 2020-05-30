@@ -10,14 +10,14 @@ Pre-requisite:
 3. Github
 4. Machine learning model
 
-<h3>Buildig and starting the container from dockerfile</h3>
- - Copy dockerfile in rhel8 system
- - Run : docker build -t cnn:v1 <path/to/dockerfile>
- We need to create a volume attachment also for the docker so that we can put the files in that volume to be run in the docker
- - docker run -d -it --name cnntrainer --mount type=bind,source=<path/to/host/sourcedir>,target=<path/to/dockerhost/targetdir> cnn:v1
- After to inspect whether the volume is attached or not use
- - docker inspect cnntrainer : Look for Mounts section, your volume attachement will be present there
- - In <path/to/host/sourcedir> put the Mymodel.py, cnn_dataset and configuration.txt
+<h3>Building and starting the container from dockerfile</h3>
+* Copy dockerfile in rhel8 system
+* Run : docker build -t cnn:v1 <path/to/dockerfile>
+* We need to create a volume attachment also for the docker so that we can put the files in that volume to be run in the docker
+* docker run -d -it --name cnntrainer --mount type=bind,source=<path/to/host/sourcedir>,target=<path/to/dockerhost/targetdir> cnn:v1
+* After to inspect whether the volume is attached or not use
+* docker inspect cnntrainer : Look for Mounts section, your volume attachement will be present there
+* In <path/to/host/sourcedir> put the Mymodel.py, cnn_dataset and configuration.txt
  
  
 > Sometimes the target directory inside won't be giving permission to write anything
