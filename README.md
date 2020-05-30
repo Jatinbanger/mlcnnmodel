@@ -12,12 +12,19 @@ Pre-requisite:
 
 <h3>Building and starting the container from dockerfile</h3>
 1. Copy dockerfile in rhel8 system
+
 2. Run : docker build -t cnn:v1 <path/to/dockerfile>
+
 3. We need to create a volume attachment also for the docker so that we can put the files in that volume to be run in the docker.
+
 4. docker run -d -it --name cnntrainer --mount type=bind,source=<path/to/host/sourcedir>,target=<path/to/dockerhost/targetdir> cnn:v1
+
 5. After to inspect whether the volume is attached or not use.
+
 6. docker inspect cnntrainer : Look for Mounts section, your volume attachement will be present there.
+
 7. In <path/to/host/sourcedir> put the Mymodel.py, cnn_dataset and configuration.txt
+
  
  
 > Sometimes the target directory inside won't be giving permission to write anything
