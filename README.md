@@ -79,6 +79,8 @@ Pre-requisite:
 
 ![Task4_1](https://github.com/Jatinbanger/mlcnnmodel/blob/master/images/Task4_1.png)
 
+The code to Change the configuration parameters is run bash shell using Jenkins user and then the train model Job called again.
+
 ![Task4_2](https://github.com/Jatinbanger/mlcnnmodel/blob/master/images/Task4_2.png)
 
 
