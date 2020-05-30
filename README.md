@@ -33,15 +33,24 @@ Pre-requisite:
 > chcon -Rt svirt_sandbox_file_t <path/to/host/sourcedir>
 > Restart the docker container
 
-<h3>Jenkins setup</h3>
- - Install Java first : sudo yum install java-1.8.0-openjdk-devel
- - Enable Jenkins Repo : curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
- - sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
- - Install Jenkins : sudo yum install jenkins
- - Start Jenkins : sudo systemctl start jenkins
- - Access Jenkins : http://your_ip_or_domain:8080
- - Provide the first time password from : sudo cat /var/lib/jenkins/secrets/initialAdminPassword
- - Install Plugins and start using Jenkins
+<h3>Jenkins setup:</h3>
+1. Install Java first : sudo yum install java-1.8.0-openjdk-devel
+
+2. Enable Jenkins Repo : curl --silent --location http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo | sudo tee /etc/yum.repos.d/jenkins.repo
+
+3. sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+
+4. Install Jenkins : sudo yum install jenkins
+
+5. Start Jenkins : sudo systemctl start jenkins
+
+6. Access Jenkins : http://your_ip_or_domain:8080
+
+7. Provide the first time password from : sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+8. Install Plugins and start using Jenkins
+
+
 
 <h4>Task 1 :: Polling to the developers repository and pulling the code whenever there is change in the code.</h4>
 
