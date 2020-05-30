@@ -10,7 +10,8 @@ Pre-requisite:
 3. Github
 4. Machine learning model
 
-<h3>Building and starting the container from dockerfile</h3>
+<h3>Building and starting the container from dockerfile:</h3>
+
 1. Copy dockerfile in rhel8 system
 
 2. Run : docker build -t cnn:v1 <path/to/dockerfile>
